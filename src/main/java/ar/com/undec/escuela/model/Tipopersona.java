@@ -8,10 +8,11 @@ import java.util.Objects;
 public class Tipopersona {
     private Integer id;
     private String nombre;
-    private Collection<Persona> personasById;
+
 
     @Id
     @Column(name = "id", nullable = false)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     public Integer getId() {
         return id;
     }
@@ -43,12 +44,5 @@ public class Tipopersona {
         return Objects.hash(id, nombre);
     }
 
-    @OneToMany(mappedBy = "tipopersonaByTipoPersona")
-    public Collection<Persona> getPersonasById() {
-        return personasById;
-    }
 
-    public void setPersonasById(Collection<Persona> personasById) {
-        this.personasById = personasById;
-    }
 }
