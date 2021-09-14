@@ -1,4 +1,8 @@
 package ar.com.undec.escuela.repository;
 
-public interface CursoRepository {
+import ar.com.undec.escuela.model.Curso;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface CursoRepository extends JpaRepository<Curso, Integer> {
+
 }

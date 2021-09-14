@@ -8,7 +8,6 @@ import java.util.Objects;
 public class Curso {
     private Integer id;
     private String nombre;
-    private Collection<Clase> clasesById;
 
     @Id
     @Column(name = "id", nullable = false)
@@ -43,12 +42,4 @@ public class Curso {
         return Objects.hash(id, nombre);
     }
 
-    @OneToMany(mappedBy = "cursoByIdCurso")
-    public Collection<Clase> getClasesById() {
-        return clasesById;
-    }
-
-    public void setClasesById(Collection<Clase> clasesById) {
-        this.clasesById = clasesById;
-    }
 }
