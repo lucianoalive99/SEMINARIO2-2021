@@ -3,6 +3,7 @@ package ar.com.undec.escuela.controller;
 import ar.com.undec.escuela.dto.Response;
 import ar.com.undec.escuela.model.Curso;
 import ar.com.undec.escuela.service.CursoService;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -10,12 +11,11 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/cursos")
+@Tag(name = "Cursos")
 public class CursoController {
 
     @Autowired
     private CursoService cursoService;
-
-
 
     @GetMapping("/todos")
     public ResponseEntity<Response> list(){

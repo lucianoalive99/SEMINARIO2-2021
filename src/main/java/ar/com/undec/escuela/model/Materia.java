@@ -8,7 +8,7 @@ import java.util.Objects;
 public class Materia {
     private Integer id;
     private String nombre;
-    private Collection<Clase> clasesById;
+
 
     @Id
     @Column(name = "id", nullable = false)
@@ -44,12 +44,5 @@ public class Materia {
         return Objects.hash(id, nombre);
     }
 
-    @OneToMany(mappedBy = "materiaByIdMateria")
-    public Collection<Clase> getClasesById() {
-        return clasesById;
-    }
 
-    public void setClasesById(Collection<Clase> clasesById) {
-        this.clasesById = clasesById;
-    }
 }

@@ -4,6 +4,7 @@ import ar.com.undec.escuela.dto.Response;
 import ar.com.undec.escuela.model.Curso;
 import ar.com.undec.escuela.model.Tipopersona;
 import ar.com.undec.escuela.service.TipoPersonaService;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -11,6 +12,7 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/tipopersona")
+@Tag(name = "Tipos de Persona")
 public class TipoPersonaController {
 
     @Autowired
